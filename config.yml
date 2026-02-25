@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "laptops"
+    label: "الأجهزة"
+    folder: "data"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "اسم الجهاز", name: "name", widget: "string"}
+      - {label: "المعالج CPU", name: "cpu", widget: "string"}
+      - {label: "الرام RAM", name: "ram", widget: "string"}
+      - {label: "الهارد HDD", name: "hdd", widget: "string"}
+      - {label: "كارت الشاشة GPU", name: "gpu", widget: "string"}
+      - {label: "القسم", name: "cat", widget: "string"}
+      - {label: "صورة الجهاز", name: "img", widget: "image"}
+      - {label: "الوصف", name: "desc", widget: "text"}
